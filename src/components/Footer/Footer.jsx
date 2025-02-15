@@ -24,11 +24,11 @@ const FooterLinks = [
     link: "/#",
   },
   {
-    title: "About",
+    title: "Shop",
     link: "/#about",
   },
   {
-    title: "Contact",
+    title: "About Us",
     link: "/#contact",
   },
   {
@@ -36,6 +36,17 @@ const FooterLinks = [
     link: "/#blog",
   },
 ];
+const FooterContacts = [
+  {
+    title :"Email: support@shopsy.com"
+  },
+  {
+    title:"Phone: (123) 456-7890"
+  },
+  {
+    title:"Address: 123 E-commerce Street"
+  }
+]
 
 const Footer = () => {
   return (
@@ -49,8 +60,8 @@ const Footer = () => {
               Shopsy
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum in
-              beatae ea recusandae blanditiis veritatis.
+              Discover unbeatable deals on your favorite products, now at huge discounts. Shop today and save big on quality items you won’t find anywhere else!
+
             </p>
           </div>
 
@@ -74,17 +85,17 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <div className="py-8 px-4">
+              <div style={{width:"300px"}} className="py-8 px-4">
                 <h1 className="sm:text-xl text-xl font-bold sm:text-left text-justify mb-3">
-                  Links
+                  Contact
                 </h1>
                 <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link) => (
+                  {FooterContacts.map((lin) => (
                     <li
                       className="cursor-pointer hover:text-primary hover:translate-x-1 duration-300 text-gray-200"
-                      key={link.title}
+                      key={lin.title}
                     >
-                      <span>{link.title}</span>
+                      <span>{lin.title}</span>
                     </li>
                   ))}
                 </ul>
@@ -93,8 +104,8 @@ const Footer = () => {
 
             {/* social links */}
 
-            <div>
-              <div className="flex items-center gap-3 mt-6">
+            <div style={{marginLeft:"100px",width:'500px'}}>
+              <div  className="flex items-center gap-3 mt-6">
                 <a href="#">
                   <FaInstagram className="text-3xl" />
                 </a>
@@ -108,7 +119,7 @@ const Footer = () => {
               <div className="mt-6">
                 <div className="flex items-center gap-3">
                   <FaLocationArrow />
-                  <p>Noida, Uttar Pradesh</p>
+                  <p>Kolkata, West Bengal</p>
                 </div>
                 <div className="flex items-center gap-3 mt-3">
                   <FaMobileAlt />
